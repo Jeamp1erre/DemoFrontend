@@ -1,0 +1,29 @@
+<h2 mat-dialog-title>Editar Historia Médica</h2>
+<mat-dialog-content>
+    <form>
+        <mat-form-field appearance="outline">
+            <mat-label>Antecedentes Médicos</mat-label>
+            <input matInput [(ngModel)]="data.antecedentesMedicos" name="antecedentesMedicos" required>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Cirugías Anteriores</mat-label>
+            <input matInput [(ngModel)]="data.cirugiasAnteriores" name="cirugiasAnteriores" required>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Alergias</mat-label>
+            <input matInput [(ngModel)]="data.alergias" name="alergias" required>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Antecedentes Familiares</mat-label>
+            <input matInput [(ngModel)]="data.antecedentesFamiliares" name="antecedentesFamiliares" required>
+        </mat-form-field>
+    </form>
+</mat-dialog-content>
+
+<mat-dialog-actions>
+    <button mat-button color="warn" (click)="onNoClick()">Cancelar</button>
+    <button mat-button [mat-dialog-close]="data" cdkFocusInitial>Guardar</button>
+</mat-dialog-actions>
